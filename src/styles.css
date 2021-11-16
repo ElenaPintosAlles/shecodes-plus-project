@@ -1,0 +1,70 @@
+button {
+    margin-bottom: 12px;
+    margin-left: 10px;
+    color: rgba(90, 98, 117);
+    border-color: rgba(90, 98, 117);
+    background-color: white;
+    padding: 1px 7px;
+  }
+  
+  .card {
+    border: 2px solid rgba(90, 98, 117);
+    font-family: "Balsamiq Sans", cursive;
+    margin-top: 40px;
+  }
+  .col {
+    text-align: center;
+    font-size: smaller;
+  }
+  .current-city {
+    border-width: 2px;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: rgba(90, 98, 117);
+    padding: 2px 55.5px;
+    color: rgba(90, 98, 117);
+  }
+  
+  .enter-city {
+    border-width: 2px;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: rgba(90, 98, 117);
+    color: rgba(90, 98, 117);
+    padding: 1px 3px;
+  }
+  h1 {
+    color: rgba(0, 110, 197);
+    font-size: 21px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  
+  .fa-cloud-rain {
+    color: rgba(120, 129, 148);
+  }
+  
+  .fa-cloud-sun {
+    color: rgba(255, 190, 0);
+  }
+  .fa-sun {
+    color: rgba(252, 225, 0);
+  }
+  .row {
+    color: rgba(147, 154, 169);
+  }
+  
+  .search-city {
+    border-color: rgba(90, 98, 117);
+    margin-left: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: rgba(90, 98, 117);
+    background-color: white;
+  }
+  
+  .today {
+    background: rgba(229, 240, 249);
+    color: rgba(0, 110, 197);
+  }
+  
