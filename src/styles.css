@@ -63,6 +63,12 @@ button {
     background-color: white;
   }
   
+  .source{
+    text-align: center;
+    font-size: smaller;
+    margin-top:20px;
+    font-family: "Balsamiq Sans", cursive;
+  }
   .today {
     background: rgba(229, 240, 249);
     color: rgba(0, 110, 197);
