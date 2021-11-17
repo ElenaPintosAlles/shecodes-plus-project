@@ -59,7 +59,7 @@ function search(town) {
   axios.get(apiUrl).then(updateTemperature);
 }
 
-function handleSumbmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let town = document.querySelector("#enter-city").value;
   search(town);
@@ -82,7 +82,7 @@ function getLocation(event) {
 }
 
 let searchForm = document.querySelector("#city-search");
-searchForm.addEventListener("submit", handleSumbmit);
+searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getLocation);
