@@ -10,7 +10,8 @@ button {
   .card {
     border: 2px solid rgba(90, 98, 117);
     font-family: "Balsamiq Sans", cursive;
-    margin-top: 40px;
+    max-width:600px;
+    margin:30px auto 2px;
   }
   .col {
     text-align: center;
