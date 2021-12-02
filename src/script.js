@@ -43,14 +43,17 @@ console.log(now.getMinutes());
 
 function updateTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  console.log(temperature);
-  console.log(response.data);
+ 
   document.querySelector("#temperature").innerHTML = temperature;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#current-city").innerHTML = response.data.name;
+  
 }
+
+//   let iconElement = document.querySelector("#icon");
+//iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response..data.weather[0].icon}@2x.png`);
 
 function search(town) {
   let apiKey = "bcec07f4d24f0897e35b27235c1cbd67";

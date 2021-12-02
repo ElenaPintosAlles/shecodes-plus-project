@@ -1,3 +1,4 @@
+
 button {
     margin-bottom: 12px;
     margin-left: 10px;
@@ -5,6 +6,7 @@ button {
     border-color: rgba(90, 98, 117);
     background-color: white;
     padding: 1px 7px;
+    width:max-content;
   }
   
   .card {
@@ -78,6 +80,7 @@ button {
   .updated {
   
     color: rgba(0, 110, 197);
+    font-size:smaller;
   }
   
 
