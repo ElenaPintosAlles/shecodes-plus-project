@@ -71,7 +71,13 @@ button {
     font-family: "Balsamiq Sans", cursive;
   }
   .today {
-    background: rgba(229, 240, 249);
+  
     color: rgba(0, 110, 197);
   }
   
+  .updated {
+  
+    color: rgba(0, 110, 197);
+  }
+  
+
