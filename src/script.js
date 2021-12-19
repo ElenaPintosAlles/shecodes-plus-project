@@ -41,6 +41,11 @@ console.log(now.getFullYear());
 console.log(now.getHours());
 console.log(now.getMinutes());
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = "Forecast";
+}
+
 function updateTemperature(response) {
   let wind = (Math.round(response.data.wind.speed) * 3600) / 1000;
   let humidity = Math.round(response.data.main.humidity);
@@ -53,7 +58,7 @@ function updateTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#current-city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.name;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -119,4 +124,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+
+displayForecast();
 // icon Element not working
