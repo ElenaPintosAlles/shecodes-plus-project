@@ -42,11 +42,12 @@ console.log(now.getHours());
 console.log(now.getMinutes());
 
 function updateTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let wind = Math.round(response.data.wind.speed);
+  let wind = (Math.round(response.data.wind.speed) * 3600) / 1000;
   let humidity = Math.round(response.data.main.humidity);
   let iconElement = document.querySelector("#icon");
-  document.querySelector("#temperature").innerHTML = temperature;
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#wind").innerHTML = wind;
   document.querySelector("#humidity").innerHTML = humidity;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -72,8 +73,6 @@ function handleSubmit(event) {
   search(town);
 }
 
-search("New York");
-
 function handlePosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
@@ -88,10 +87,36 @@ function getLocation(event) {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getLocation);
 
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("New York");
 // icon Element not working

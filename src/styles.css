@@ -4,6 +4,14 @@
   max-width: 600px;
   margin: 30px auto 2px;
 }
+
+.active {
+  color: rgba(0, 110, 197);
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .col {
   text-align: center;
   font-size: smaller;
@@ -56,6 +64,10 @@ h1 {
   font-size: smaller;
   margin-top: 20px;
   font-family: "Balsamiq Sans", cursive;
+}
+
+#temperature {
+  font-weight: bold;
 }
 .today {
   color: rgba(0, 110, 197);
