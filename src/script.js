@@ -27,7 +27,7 @@ let months = [
   "09",
   "10",
   "11",
-  "12"
+  "12",
 ];
 let month = months[now.getMonth()];
 
@@ -43,17 +43,21 @@ console.log(now.getMinutes());
 
 function updateTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
- 
+  let wind = Math.round(response.data.wind.speed);
+  let humidity = Math.round(response.data.main.humidity);
+  let iconElement = document.querySelector("#icon");
   document.querySelector("#temperature").innerHTML = temperature;
+  document.querySelector("#wind").innerHTML = wind;
+  document.querySelector("#humidity").innerHTML = humidity;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#current-city").innerHTML = response.data.name;
-  
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
-
-//   let iconElement = document.querySelector("#icon");
-//iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response..data.weather[0].icon}@2x.png`);
 
 function search(town) {
   let apiKey = "bcec07f4d24f0897e35b27235c1cbd67";
@@ -89,3 +93,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getLocation);
+
+// icon Element not working

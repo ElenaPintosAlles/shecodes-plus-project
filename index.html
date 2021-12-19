@@ -21,15 +21,13 @@
         <div class="card">
             <div class="card-body">
                
-   <span class = "current-city" id="current-city">Hamburg</span>
 
-
-        <button class="btn btn-primary" id = "current-location" > Show current location</button>
-  
+        
         <form id = "city-search">
             <input type="search" class="enter-city" id = "enter-city" placeholder="Enter a city">
             <input class="btn btn-primary" type="submit" class="search-city" value="Search">
-        </form>
+       <button class="btn btn-secondary" id = "current-location" > Current location</button>
+   </form>
 <h1 id="city"></h1>
 <span class = "updated">Last updated:</span>
 <span class="today" id ="date">
@@ -41,7 +39,9 @@ Sat, 09.10.2021
 <span class="today">
 <span id="description"> </span> <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon" />
 </br>
-<span id = "temperature"></span>  °C
+<span id = "temperature"></span>  °C  | °F
+<div class="wind"> Wind speed: <span id = "wind"> </span> m/s </div>
+<div class="humidity"> Humidity: <span id = "humidity"> </span> % </div>
 </span>
 <hr>
 
